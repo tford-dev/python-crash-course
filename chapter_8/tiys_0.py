@@ -33,5 +33,5 @@ def kanye_tracks(*tracks):
     for track in tracks:
         print(track.title());
 
-kanye_tracks("power");
-kanye_tracks("power", "through the wire", "touch the sky");
+#kanye_tracks("power");
+#kanye_tracks("power", "through the wire", "touch the sky");
