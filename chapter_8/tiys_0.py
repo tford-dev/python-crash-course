@@ -27,4 +27,11 @@ def name_of_user():
         formatted_name = get_formatted_name(first_name, last_name, middle_name);
         print(f"You have shown bravery, {formatted_name}.");
 
-name_of_user();
+#name_of_user();
+
+def kanye_tracks(*tracks):
+    for track in tracks:
+        print(track.title());
+
+kanye_tracks("power");
+kanye_tracks("power", "through the wire", "touch the sky");
