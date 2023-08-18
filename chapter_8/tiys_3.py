@@ -65,4 +65,21 @@ def build_profile(**user_info):
                 print(user_info);
                 return False;
 
-build_profile();
+#build_profile();
+
+"""
+8-14. Cars: Write a function that stores information about a car in a dictionary. The function
+should always receive a manufacturer and a model name. It should then accept an arbitrary
+number of keyword arguments. Call the function with the required information and two other
+name-value pairs, such as a color or an optional feature.
+"""
+
+def make_car(make, model, **optional_feature):
+    car_dict = {};
+    car_dict['make'] = make;
+    car_dict['model'] = model;
+    for key, value in optional_feature.items():
+        car_dict[key] = value;
+    print(car_dict);
+
+make_car('toyota', 'camry', color='green', tow_package=True);
