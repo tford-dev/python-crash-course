@@ -1,0 +1,1 @@
+print(my_dog.name, my_dog.age);
