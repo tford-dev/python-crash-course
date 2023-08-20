@@ -61,10 +61,10 @@ class User:
 test0 = User("terry", "stylez", "richmond, va", "The most prolific mediocre DJ in all of Virginia.");
 test0.describe_user();
 
-test1 = User("terry", "stylez", "richmond, va");
+test1 = User("terry", "stylez", location="richmond, va");
 test1.describe_user()
 
-test2 = User("terry", "stylez", "The most prolific mediocre DJ in all of Virginia");
+test2 = User("terry", "stylez", bio="The most prolific mediocre DJ in all of Virginia");
 test2.describe_user()
 
 test3 = User("terry", "stylez");
