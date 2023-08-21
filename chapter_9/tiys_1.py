@@ -77,11 +77,11 @@ class User:
             print(f"{self.first_name.title()} {self.last_name.title()}")
 
 
-test0 = User("terry", "stylez", "richmond, va", "The most prolific mediocre DJ in all of Virginia.");
+""" test0 = User("terry", "stylez", "richmond, va", "The most prolific mediocre DJ in all of Virginia.");
 test0.describe_user();
 test0.increment_login_attempts();
 test0.increment_login_attempts();
-test0.increment_login_attempts()
+test0.increment_login_attempts() """
 
 """
 test1 = User("terry", "stylez", location="richmond, va")
