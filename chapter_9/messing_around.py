@@ -67,3 +67,11 @@ my_tesla = ElectricCar(make="tesla", model="model s", year=2019);
 print(my_tesla.get_descriptive_name());
 my_tesla.battery.describe_battery();
 my_tesla.battery.get_range();
+
+#-------import templates------------------------------------------------------------
+#from car import ElectricCar
+#from car import Car, ElectricCar -this is to import multiple classes
+#import car -this is to import an entire module
+#from module_name import *
+#from car import car -importing a Module into a Module
+#from electric_car import ElectricCar as EC -Using Aliases
