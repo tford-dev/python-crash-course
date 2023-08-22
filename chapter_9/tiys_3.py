@@ -28,5 +28,21 @@ Randomly select four numbers or letters from the list and print a message saying
 matching these four numbers or letters wins a prize. """
 
 class Lottery:
-    def __init__(self, lottery_data=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 'a', 'b', 'c', 'd', 'e']):
+    def __init__(self, lottery_data=[]):
         self.lottery_data = lottery_data;
+
+    def choose_num(self):
+        lot_num = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 'a', 'b', 'c', 'd', 'e'];
+        for i in range(5):
+            random_int = random.randint(1, len(lot_num) - 1);
+            select_num = lot_num[random_int];
+            self.lottery_data.append(select_num);
+
+    def show_num(self):
+        self.choose_num();
+        separator = ", ";
+        num_string = separator.join(map(str, self.lottery_data));
+        print(f"The lottery numbers are: {num_string}");
+
+winning_num = Lottery();
+winning_num.show_num();
