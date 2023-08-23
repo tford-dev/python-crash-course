@@ -103,7 +103,6 @@ class Lottery:
         setattr(self, destination_str, choose_num_str);
         print(destination_str);
 
-        
     def play(self):
         while True:
             self.choose_num(self.lottery_data, "lottery_num_string");
