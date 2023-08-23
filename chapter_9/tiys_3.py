@@ -33,7 +33,7 @@ numbers until your ticket wins. Print a message reporting how many times the loo
 to give you a winning ticket.
 """
 
-class Lottery:
+""" class Lottery:
     def __init__(self):
         self.lottery_data = [];
         self.ticket_list = [];
@@ -78,7 +78,45 @@ class Lottery:
                 print("You lose. Spend $20 more dollars on a ticket.");
 
 winning_num = Lottery();
-winning_num.play();
+winning_num.play(); """
 # winning_num.choose_num();
 # winning_num.show_num();
 # winning_num.my_ticket()
+
+class Lottery:
+    def __init__(self):
+        self.lottery_data = [];
+        self.ticket_list = [];
+        self.lottery_numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 'a', 'b', 'c', 'd', 'e'];
+        self.lottery_num_string = "";
+        self.player_num_string = "";
+        self.num_of_tries = 0;
+        
+    def choose_num(self, list_arr, destination_str=""):
+        list_arr = [];
+        for i in range(5):
+            random_int = random.randint(0, len(self.lottery_numbers) - 1);
+            select_num = self.lottery_numbers[random_int];
+            list_arr.append(select_num);
+        separator = ", ";
+        choose_num_str = separator.join(map(str, list_arr));
+        setattr(self, destination_str, choose_num_str);
+        print(destination_str);
+
+        
+    def play(self):
+        while True:
+            self.choose_num(self.lottery_data, "lottery_num_string");
+            self.choose_num(self.ticket_list, "player_num_string");
+            print(self.lottery_num_string);
+            print(self.player_num_string);
+            if(self.lottery_num_string == self.player_num_string):
+                print(f"The winning numbers {self.lottery_num_string} match your numbers: {self.player_num_string}.\nIt took you {self.num_of_tries} tries. \nYou're rich for a little while.");
+                break;
+            else:
+                self.num_of_tries += 1;
+                print(f"The lottery numbers are: {self.lottery_num_string}. \nYour numbers are {self.player_num_string}")
+                print("You lose. Spend $20 more dollars on a ticket.");
+
+winning_num = Lottery();
+winning_num.play();
