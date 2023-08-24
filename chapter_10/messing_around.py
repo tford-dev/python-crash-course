@@ -58,4 +58,43 @@ def create_txt(method):
         file_object.write("(oh-oh-oh-oh, oh-oh-oh-oh)\n");
 
 #create_txt("w"); #write/create file
-create_txt("a"); #append/add to file
+#create_txt("a"); #append/add to file
+
+def divide_by_zero():
+    print("Give me two numbers, and I'll divide them.\nEnter 'q' to quit");
+    while True:
+        first_number = input("\nFirst number: ");
+        if first_number.lower() == 'q':
+            break;
+        second_number = input("Second number: ");
+        if second_number.lower() == 'q':
+            break;
+        try:
+            answer = int(first_number) / int(second_number);
+        except ZeroDivisionError:
+            print("You CAN NOT divide by 0 NOR can you divide LETTERS!");
+        except ValueError:
+            print("You CAN NOT divide by 0 NOR can you divide LETTERS!");
+        else:
+            print(answer);
+
+#divide_by_zero();
+#filename = "chapter_10/text_files/learning_python.txt";
+def num_of_words(filename):
+    try:
+        with open(filename, encoding='utf-8') as f:
+            contents = f.read();
+    except FileNotFoundError:
+        #pass -failing silently
+        print(f"Sorry, the file {filename} does not exist.");
+    else:
+        words = contents.split();
+        num_words = len(words);
+        print(f"The file {filename} has about {num_words} words.\n");
+
+def count_multiple_files(files_list):
+    filenames = files_list;
+    for filename in filenames:
+        num_of_words(filename);
+
+count_multiple_files(["chapter_10/text_files/learning_python.txt", "chapter_10/text_files/pi_digits.txt", "chapter_10/text_files/pi_million_digits.txt", "chapter_10/text_files/programming_poll.txt"]);
