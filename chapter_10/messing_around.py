@@ -49,4 +49,13 @@ def birthday_pi():
     else:
         print("Your birthday is not in the first one million digits of pi.")
 
-birthday_pi();
+#birthday_pi();
+
+def create_txt(method):
+    filename = 'programming.txt';
+    with open(filename, f"{method}") as file_object:
+        file_object.write("Take a shot for me\n");
+        file_object.write("(oh-oh-oh-oh, oh-oh-oh-oh)\n");
+
+#create_txt("w"); #write/create file
+create_txt("a"); #append/add to file
