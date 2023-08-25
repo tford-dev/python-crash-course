@@ -10,9 +10,14 @@ def pizza_toppings():
     message = "";
     while message.lower() != 'quit':
         message = input(prompt);
-        pizza_list.append(message);
-        for topping in pizza_list:
-            print(f"You chose {topping} as a topping.");
+        if message != 'quit':
+            pizza_list.append(message);
+            for topping in pizza_list:
+                print(f"You chose {topping} as a topping.");
+        else: 
+            for topping in pizza_list:
+                print(f"You chose {topping} as a topping.")
+            break;
 
 #pizza_toppings();
 
@@ -41,7 +46,7 @@ def movie_tickets():
         except ValueError:
             print(f"'{prompt}' is not a valid ")
 
-movie_tickets();
+#movie_tickets();
 
 """
 7-6. Three Exits: Write different versions of either Exercise 7-4 or Exercise 7-5 that do each
